@@ -1,0 +1,11 @@
+html {
+    background: lightgray; 
+}
+
+.Exam {
+    width: 50%;
+    height: 80vh;
+    margin: auto;
+    padding: 10px;
+    background: white;
+}
