@@ -1,5 +1,6 @@
 import { useState } from "react"
 import Exam from "./components/Exam"
+import Menu from "./components/Menu"
 
 const App = () => {
 
@@ -16,6 +17,9 @@ const App = () => {
 			</div>
 			<div className="Exam">
 				<Exam printForm={printForm} />
+			</div>
+			<div className="Menu">
+				<Menu  />
 			</div>
 		</div>
 	)
