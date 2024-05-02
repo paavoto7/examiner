@@ -1,8 +1,10 @@
+import { useState } from "react"
 import DeleteButton from "./DeleteButton"
 
 const ImageProblem = ({ number, lines, image, deleteProblem }) => {
+    const [lineAmount, setLineAmount] = useState(lines)
 
-    const linesToPrint = <p className="wrap">{"_".repeat(lines)}</p>
+   // const linesToPrint = 
 
     return (
         <div>
@@ -11,7 +13,8 @@ const ImageProblem = ({ number, lines, image, deleteProblem }) => {
             <div className="imageDisplay">
                 <img src={URL.createObjectURL(image)} width="100%" height="100%" />
             </div>
-            {linesToPrint}
+            <p contentEditable className="wrap">{"_".repeat(lineAmount)}</p>
+            <input style={{width:"40%"}} type="range" min={1} max={1000} value={lineAmount} onChange={e => setLineAmount(e.currentTarget.value)} />
         </div>
     )
 }
