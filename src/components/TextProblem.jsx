@@ -1,15 +1,15 @@
 
 
-const Problem = ({ number, lines }) => {
+const TextProblem = ({ number, lines }) => {
 
     const linesToPrint = <p>{"_".repeat(lines)}</p>
 
     return (
         <div>
-            <h2>Problem {number}</h2>
+            <h2 contentEditable>Problem {number}</h2>
             {linesToPrint}
         </div>
     )
 }
 
-export default Problem
+export default TextProblem

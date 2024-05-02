@@ -6,4 +6,9 @@
     button {
         display: none;
     }
+
+    .imageDisplay {
+        resize: none;
+        overflow: hidden;
+    }
 }

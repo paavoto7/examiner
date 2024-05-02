@@ -10,3 +10,9 @@ html {
     background: white;
 }
 
+.imageDisplay {
+    width: 80px;
+    height: auto;
+    resize: both;
+    overflow: auto;
+}

@@ -1,5 +1,6 @@
 import { useState, useRef } from "react"
-import Problem from "./Problem"
+import TextProblem from "./TextProblem"
+import ImageProblem from "./ImageProblem"
 import Togglable from "./Togglable"
 import NewProblem from "./NewProblem"
 
@@ -8,26 +9,30 @@ const Exam = ({ printForm }) => {
 
     const visibilityRef = useRef()
 
-    const addProblem = (amount) => {
+    const addProblem = (amount, image) => {
         visibilityRef.current.toggleVisibility()
         const problem = {
             order: problems.length+1,
-            amount
+            amount,
+            image
         }
         setProblems(problems.concat(problem))
     }
 
     return (
         <>
-        <form onSubmit={printForm}>
+        <div>
             <Togglable ref={visibilityRef} buttonLabel="New problem">
                 <NewProblem addProblem={addProblem} />
             </Togglable>
 
-            {problems.map(problem => <Problem key={problem.order} number={problem.order} lines={problem.amount} />)}
+            {problems.map(problem => 
+            problem.image
+            ? <ImageProblem key={problem.order} number={problem.order} lines={problem.amount} image={problem.image} />
+            : <TextProblem key={problem.order} number={problem.order} lines={problem.amount} />)}
             
-            <button style={{float:"left",position: "absolute", bottom: "10%"}} type="submit">Print</button>
-        </form>
+            <button style={{float:"left",position: "absolute", bottom: "10%"}} onClick={printForm}>Print</button>
+        </div>
         </>
     )
 }
