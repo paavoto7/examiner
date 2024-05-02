@@ -16,3 +16,11 @@ html {
     resize: both;
     overflow: auto;
 }
+
+.wrap {
+    word-wrap: break-word;
+}
+
+.deleteButton {
+    float: right;
+}

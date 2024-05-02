@@ -19,6 +19,9 @@ const Exam = ({ printForm }) => {
         setProblems(problems.concat(problem))
     }
 
+    const deleteProblem = (order) => setProblems(
+        problems.filter(problem => problem.order !== order))
+
     return (
         <>
         <div>
@@ -26,10 +29,10 @@ const Exam = ({ printForm }) => {
                 <NewProblem addProblem={addProblem} />
             </Togglable>
 
-            {problems.map(problem => 
-            problem.image
-            ? <ImageProblem key={problem.order} number={problem.order} lines={problem.amount} image={problem.image} />
-            : <TextProblem key={problem.order} number={problem.order} lines={problem.amount} />)}
+            {problems.map(problem => problem.image
+                ? <ImageProblem key={problem.order} number={problem.order} lines={problem.amount} image={problem.image} deleteProblem={deleteProblem} />
+                : <TextProblem key={problem.order} number={problem.order} lines={problem.amount} deleteProblem={deleteProblem} />)
+            }
             
             <button style={{float:"left",position: "absolute", bottom: "10%"}} onClick={printForm}>Print</button>
         </div>
