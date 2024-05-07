@@ -31,7 +31,9 @@ const Exam = ({ printForm }) => {
             <Problem key={problem.order} number={problem.order} lines={problem.amount} image={problem.image} deleteProblem={deleteProblem} />
             )}
             
-            <button style={{position: "fixed", bottom: "1%", left: "25%"}} onClick={printForm}>Print</button>
+            <button className="printButton" onClick={printForm}>
+                <span className="material-symbols-outlined">print</span>
+            </button>
         </>
     )
 }

@@ -8,11 +8,10 @@ html {
     margin: auto;
     padding: 10px;
     padding-top: 5px;
+    padding-bottom: 5%;
     background: white;
     border: 1px solid;
     border-color: black;
-    display: flex;
-    flex-direction: column;
 }
 
 .imageDisplay {
@@ -28,4 +27,22 @@ html {
 
 .Delete {
     float: right;
+}
+
+.flexComponent {
+    display: flex;
+    flex-direction: column;
+}
+
+.printButton {
+    position: fixed;
+    bottom: 1%;
+    left: 25%;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.material-symbols-outlined {
+    font-size: 50px;
 }

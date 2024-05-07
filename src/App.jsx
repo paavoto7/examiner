@@ -12,9 +12,9 @@ const App = () => {
 	return (
 		<div>
 			<div className="header">
-				<h1>Hello world</h1>
+				<h1>Examiner</h1>
 			</div>
-			<div className="Exam">
+			<div className="Exam flexComponent">
 				<Exam printForm={printForm} />
 			</div>
 		</div>
