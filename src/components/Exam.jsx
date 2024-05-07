@@ -1,8 +1,7 @@
 import { useState, useRef } from "react"
-import TextProblem from "./TextProblem"
-import ImageProblem from "./ImageProblem"
 import Togglable from "./Togglable"
 import NewProblem from "./NewProblem"
+import Problem from "./Problem"
 
 const Exam = ({ printForm }) => {
     const [problems, setProblems] = useState([])
@@ -24,18 +23,15 @@ const Exam = ({ printForm }) => {
 
     return (
         <>
-        <div>
             <Togglable ref={visibilityRef} buttonLabel="New problem">
                 <NewProblem addProblem={addProblem} />
             </Togglable>
 
-            {problems.map(problem => problem.image
-                ? <ImageProblem key={problem.order} number={problem.order} lines={problem.amount} image={problem.image} deleteProblem={deleteProblem} />
-                : <TextProblem key={problem.order} number={problem.order} lines={problem.amount} deleteProblem={deleteProblem} />)
-            }
+            {problems.map(problem => 
+            <Problem key={problem.order} number={problem.order} lines={problem.amount} image={problem.image} deleteProblem={deleteProblem} />
+            )}
             
-            <button style={{float:"left",position: "absolute", bottom: "10%"}} onClick={printForm}>Print</button>
-        </div>
+            <button style={{position: "fixed", bottom: "1%", left: "25%"}} onClick={printForm}>Print</button>
         </>
     )
 }

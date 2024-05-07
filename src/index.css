@@ -4,10 +4,15 @@ html {
 
 .Exam {
     width: 50%;
-    height: 80vh;
+    min-height: 90vh;
     margin: auto;
     padding: 10px;
+    padding-top: 5px;
     background: white;
+    border: 1px solid;
+    border-color: black;
+    display: flex;
+    flex-direction: column;
 }
 
 .imageDisplay {
@@ -21,6 +26,6 @@ html {
     word-wrap: break-word;
 }
 
-.deleteButton {
+.Delete {
     float: right;
 }

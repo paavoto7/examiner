@@ -2,6 +2,7 @@
     .Exam {
         height: 100vh;
         width: 100vw;
+        border: none;
     }
 
     .header {
@@ -15,5 +16,9 @@
     .imageDisplay {
         resize: none;
         overflow: hidden;
+    }
+
+    .dropdown {
+        display: none;
     }
 }
