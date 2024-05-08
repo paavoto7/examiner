@@ -2,7 +2,6 @@ import { useState, useRef } from "react"
 import Togglable from "./Togglable"
 
 const SwitchButton = ({funcToDo, problems, icon, order, name}) => {
-    const [buttonVisible, setButtonVisible] = useState("hidden")
 
     const visibilityRef = useRef()
 

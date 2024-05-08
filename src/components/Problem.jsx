@@ -3,7 +3,7 @@ import Button from "./Button"
 import Dropdown from "./Dropdown"
 import SwitchButton from "./SwitchButton"
 
-const Problem = ({ problem, deleteProblem, switchProblem, problems, changeLineAmount }) => {
+const Problem = ({ problem, problems, deleteProblem, switchProblem, changeLineAmount }) => {
     const [lineAmount, setLineAmount] = useState(lines)
     const [lineHeight, setLineHeight] = useState(1)
 
