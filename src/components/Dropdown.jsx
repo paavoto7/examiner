@@ -1,13 +1,13 @@
 
 
-const Dropdown = ({ handleChange, values }) => {
+const Dropdown = ({ handleChange, values, label }) => {
 
     return(
         <div className="dropdown">
-            <label htmlFor="dropdownMenu">Line height: </label>
-            <select name="dropdownMenu" className="dropdownMenu" onChange={event => handleChange(event.target.value)}>
+            <label htmlFor="dropdownMenu">{label}</label>
+            <select id="dropdownMenu" className="dropdownMenu" onChange={event => handleChange(event.target.value)}>
                 {values.map(value => 
-                    <option value={value}>{value}</option>
+                    <option key={value} value={value}>{value}</option>
                 )}
             </select>
         </div>

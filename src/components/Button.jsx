@@ -1,9 +1,12 @@
 
 
-const Button = ({funcToDo, order, name}) => {
+const Button = ({funcToDo, order, name, icon}) => {
 
     return (
-        <button className={name} onClick={() => funcToDo(order)}>{name}</button>
+        <button className={name + "iconBtn"} onClick={() => funcToDo(order)}>
+            <span className="material-symbols-outlined">{icon}</span>
+            <span>{name}</span>
+        </button>
     )
 }
 

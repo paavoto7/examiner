@@ -34,15 +34,24 @@ html {
     flex-direction: column;
 }
 
-.printButton {
+.printBtn {
     position: fixed;
     bottom: 1%;
     left: 25%;
-    background-color: transparent;
-    border: none;
+    background-color: lightblue;
+}
+
+.iconBtn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid;
+    border-radius: 12px;
     cursor: pointer;
 }
 
-.material-symbols-outlined {
-    font-size: 50px;
+.buttonDiv {
+    display: flex;
+    flex-direction: column;
+    float: right;
 }
