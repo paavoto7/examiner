@@ -21,7 +21,8 @@ const App = () => {
             order,
             amount,
             image,
-            header: `Problem ${order}`
+            header: `Problem ${order}`,
+            index: problems.length
         }
         setProblems(problems.concat(problem))
     }
@@ -29,14 +30,14 @@ const App = () => {
     const switchPlaces = (orderOne, orderTwo) => {
         if (orderOne === orderTwo) return
         setProblems(problems => {
-            console.log(orderOne, orderTwo)
             let data = [...problems]
-            data[orderOne-1].order = orderTwo
-            data[orderTwo-1].order = orderOne
-            data.sort((a, b) => a.order - b.order)
+            let temp = {...data[orderOne], index: orderTwo}
+            data[orderOne] = {...data[orderTwo], index: orderOne}
+            data[orderTwo] = temp
             return data
         })
     }
+    
 
     const deleteProblem = (order) => setProblems(
         problems.filter(problem => problem.order !== order))
