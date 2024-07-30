@@ -22,7 +22,7 @@ const NewProblem = ({ addProblem }) => {
                 <label htmlFor="addImage">Add an image </label>
                 <input id="addImage" type="file" accept="image/*" onChange={e => setImage(e.target.files[0])} />
             </div>
-            <button style={{width:"10%", marginBottom:"5px"}} type="submit">Add</button>
+            <button className="submitButton" type="submit">Add</button>
         </form>
     )
 }

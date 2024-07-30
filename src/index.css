@@ -56,3 +56,21 @@ html {
     flex-direction: column;
     float: right;
 }
+
+.submitButton {
+    width: 10%;
+    margin-bottom: 5px;
+}
+
+@media only screen and (max-width:700px) {
+    .Exam {
+        width: 90%;
+    }
+
+    .printBtn {
+        left: 5%;
+    }
+    .submitButton {
+        width: 20%;
+    }
+}

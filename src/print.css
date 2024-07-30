@@ -21,4 +21,14 @@
     .dropdown > *, .Delete > *, .iconBtn {
         display: none;
     }
+
+    .newProblem {
+        display: none;
+    }
+
+    @page {
+        size: auto;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
 }
